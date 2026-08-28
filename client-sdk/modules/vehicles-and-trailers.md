@@ -35,6 +35,7 @@ const TruckersMP::Float3 speed = vehicle.GetLinearVelocity().value_or( {} );
 | `GetPlacement()` | `Placement` | Position (`Double3`) and rotation (`Quaternion`) in world space. |
 | `GetLinearVelocity()` | `Float3` | Meters per second, world space. |
 | `GetAngularVelocity()` | `Float3` | Radians per second, world space. |
+| `GetBoundingBox()` | `Bounds` | Model bounding box in vehicle space, meters. |
 | `GetTrailer()` | `Trailer` | The attached trailer, if any. |
 
 ## The Trailer handle
@@ -45,6 +46,7 @@ const TruckersMP::Float3 speed = vehicle.GetLinearVelocity().value_or( {} );
 | `GetPlacement()` | `Placement` | Position and rotation in world space. |
 | `GetLinearVelocity()` | `Float3` | Meters per second, world space. |
 | `GetAngularVelocity()` | `Float3` | Radians per second, world space. |
+| `GetBoundingBox()` | `Bounds` | Model bounding box in trailer space, meters. |
 
 Handles stay meaningful while the entity is present in the game world; after
 despawn, every getter returns empty.
